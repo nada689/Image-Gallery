@@ -1,0 +1,65 @@
+body {
+  direction: rtl !important;
+  margin: 0px;
+}
+/* Styles for Main Container */
+.box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap !important; // Wrap items inside container
+  gap: 10px !important; // Gap between items
+  width: 100% !important;
+}
+
+// Styles for Photo Cards
+.imgContainer {
+  width: 25% !important;
+  border: 15px solid white; /* Border around each card */
+  overflow: hidden; /* Hide overflow content */
+  -webkit-box-shadow: 0 0 20px #ddd; /* Box shadow for webkit browsers */
+  -moz-box-shadow: 0 0 20px #ddd; /* Box shadow for mozilla browsers */
+  box-shadow: 0 0 20px #ddd; /* Box shadow */
+  img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    cursor: zoom-in;
+    transition: 0.3s; /* Image transition duration */
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+
+  &:hover img {
+    transform: rotate(5deg) scale(1.1); /* Image transformation on hover */
+  }
+}
+
+@media (max-width: 690px) {
+  .box {
+    flex-direction: column !important;
+  }
+
+  .imgContainer {
+    margin-bottom: 20px !important;
+    width: 85% !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 950px) {
+  .imgContainer {
+    margin-bottom: 20px !important;
+    width: 40% !important;
+  }
+}
+.caption{
+  display: flex;
+  justify-content: space-between;
+}
+.delete{
+  cursor: pointer;
+}

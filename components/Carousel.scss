@@ -1,0 +1,14 @@
+.Box{
+    width: 100%;
+}
+img{
+    height: 300px;
+  }
+.carousel-indicators {
+  display: none;
+}
+@media (max-width: 690px) {
+    img {
+      width: 100% !important;
+    }
+  }
